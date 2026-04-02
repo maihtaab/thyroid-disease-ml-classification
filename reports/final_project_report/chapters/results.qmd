@@ -1,33 +1,72 @@
 # Results
 
-To compare different machine learning models in the results section, here are some steps to consider:
+This section presents the performance results of the machine learning models used in this project. The models were evaluated using the testing dataset to determine their ability to predict thyroid disease.
+
 
 ## Description of the Models
 
-Start by providing a brief description of each model, including its purpose, algorithm type, and any relevant parameters or features used.
+Three supervised machine learning classification models were implemented and evaluated in this project:
+
+- **Logistic Regression**: A statistical classification model that predicts the probability of a binary outcome using a logistic function. It is commonly used for medical classification problems because of its interpretability and efficiency.
+
+- **Decision Tree**: A non-linear classification model that splits the dataset into branches based on feature values. Decision trees are capable of capturing complex relationships between variables and are easy to visualize and interpret.
+
+- **Random Forest**: An ensemble learning method that builds multiple decision trees and combines their predictions. By aggregating the predictions of several trees, Random Forest models often achieve better accuracy and improved generalization compared to a single decision tree.
+
 
 ## Performance Metrics
 
-Describe the performance metrics used to evaluate the models, such as RMSE, MSE, accuracy, precision, recall, F1 score, or area under the receiver operating characteristic curve (AUC-ROC), etc based on the model class.
+Several evaluation metrics were used to assess the predictive performance of the models:
+
+- **Accuracy** measures the proportion of correct predictions made by the model.
+- **Precision** measures the proportion of predicted positive cases that were actually correct.
+- **Recall** measures how well the model identifies actual positive cases.
+- **F1-score** provides a balance between precision and recall.
+
+These metrics provide a more complete evaluation of model performance, particularly in datasets where class imbalance may exist.
+
 
 ## Results Table
 
-Create a results table that presents the performance metrics for each model in a clear and concise format. The table should include the name of the model, the performance metric, and the value of the metric. It can also be helpful to include the standard deviation or confidence intervals for each metric.
+The performance of the evaluated machine learning models was measured using accuracy, precision, recall, and F1-score. These metrics provide a comprehensive evaluation of how well each model predicts thyroid disease cases.
 
-## Interpretation of the Results 
+Table: Performance comparison of machine learning models for thyroid disease detection. {#tbl-model-results}
 
-Provide an interpretation of the results, highlighting any significant differences between the models. Discuss which model performed the best and why, as well as any limitations or potential sources of error.
+| Model | Accuracy | Precision | Recall | F1 Score |
+|------|------:|------:|------:|------:|
+| Logistic Regression | 0.9839 | 0.875 | 0.467 | 0.609 |
+| Decision Tree | 0.9839 | 0.714 | 0.667 | 0.690 |
+| Random Forest | 0.9875 | 0.833 | 0.667 | 0.741 |
+
+Table @tbl-model-results summarizes the performance of the evaluated models. All three models achieved high accuracy, indicating strong predictive performance on the dataset. Among them, the Random Forest model achieved the highest overall performance, particularly in terms of F1-score, which reflects a better balance between precision and recall. This suggests that Random Forest is the most suitable model for thyroid disease detection in this study.
+
+## Interpretation of the Results
+
+The results show that all three models achieved high classification accuracy, indicating that the dataset contains strong patterns that allow effective prediction of thyroid disease.
+
+Among the evaluated models, the **Random Forest model achieved the highest accuracy and F1-score**, making it the best-performing model in this study. The ensemble nature of Random Forest allows it to combine multiple decision trees, which improves predictive performance and reduces overfitting.
+
+The Decision Tree model also performed well and achieved higher recall than Logistic Regression. This suggests that the Decision Tree was more effective at identifying positive thyroid disease cases.
+
+Logistic Regression achieved high overall accuracy but lower recall compared to the other models. This may indicate that the model was more conservative in predicting positive cases, potentially due to class imbalance in the dataset.
+
+Overall, the results demonstrate that ensemble learning methods such as Random Forest can provide strong predictive performance when applied to medical classification problems.
+
 
 ## Visualization
 
-Provide visualizations to support the interpretation of the results, such as bar charts or box plots. These can help to illustrate the differences between the models and make the results more accessible to readers.
+![Performance comparison](img/model_performance_comparison.png)
+
+Figure 1: Performance comparison of Logistic Regression, Decision Tree, and Random Forest models based on accuracy, precision, recall, and F1-score.
+
+Figure 1 compares the performance of the three machine learning models used in this study. The Random Forest model achieved the highest overall performance with the best accuracy and F1-score among the evaluated models. Logistic Regression and Decision Tree also performed well, but Random Forest provided a better balance between precision and recall, making it the most suitable model for thyroid disease detection in this dataset.
+
+![Confusion matrix](img/random_forest_confusion_matrix.png)
+
+Figure 2: Confusion matrix for the Random Forest classifier showing predicted versus actual thyroid disease classifications.
+
+Figure 2 illustrates the classification performance of the Random Forest model using a confusion matrix. The matrix shows that the model correctly classified the majority of non-disease cases while also identifying a portion of disease cases. However, some disease cases were misclassified, which may be due to class imbalance in the dataset. Despite this, the model demonstrates strong overall predictive performance.
 
 ## Sensitivity Analysis
 
-Conduct a sensitivity analysis to test the robustness of the models. This can involve varying the parameters or features used in the models and re-evaluating their performance.
-
-
-
-
-
-
+Sensitivity analysis was not extensively performed in this study. However, future work could explore hyperparameter tuning or feature selection techniques to further improve model performance and robustness.

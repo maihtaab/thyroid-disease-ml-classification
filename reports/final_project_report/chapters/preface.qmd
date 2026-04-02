@@ -1,3 +1,3 @@
 # Preface {.unnumbered}
 
-Write your content.
+This report presents the results of a machine learning project conducted as part of the CP322 course. The objective of the project was to explore how machine learning techniques can be applied to medical datasets to predict thyroid disease. The project focuses on comparing several supervised learning models and evaluating their predictive performance using clinical data from the UCI Thyroid Disease Dataset. The analysis demonstrates how data preprocessing, model selection, and evaluation metrics can be combined to build an effective machine learning pipeline.

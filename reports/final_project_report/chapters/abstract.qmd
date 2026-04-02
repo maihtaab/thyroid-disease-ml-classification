@@ -1,3 +1,9 @@
 # Abstract {.unnumbered}
 
-Type here the abstract of the project.
+This project investigates the use of machine learning models to predict hyperthyroid disease using the Thyroid Disease Dataset from the UCI Machine Learning Repository. The objective of the study is to determine whether patient medical attributes can be used to accurately classify the presence of hyperthyroid conditions.
+
+The dataset was preprocessed by handling missing values, encoding categorical variables, and preparing features for machine learning models. After preprocessing, the data was divided into training and testing sets for model evaluation.
+
+Three supervised learning models were implemented and compared: Logistic Regression, Decision Tree, and Random Forest. Model performance was evaluated using accuracy, precision, recall, and F1-score.
+
+The results show that all models achieved high predictive accuracy, with Random Forest providing the best overall performance. These findings demonstrate that machine learning techniques can effectively analyze medical datasets and assist in predicting thyroid disease conditions.

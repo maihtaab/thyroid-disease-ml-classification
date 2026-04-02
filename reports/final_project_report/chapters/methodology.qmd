@@ -1,32 +1,90 @@
 # Methodology
 
+This section describes the machine learning framework used in this project, including the programming environment, data preparation steps, model selection, training process, and evaluation methods.
+
+
 ## Introduction to Python for Machine Learning
 
+Python is widely used for machine learning because of its extensive ecosystem of scientific computing libraries. In this project, Python was used as the primary programming language to implement the data preprocessing steps, machine learning models, and performance evaluation.
+
+Several popular Python libraries were used, including:
+
+- **Pandas** for data manipulation and preprocessing
+- **NumPy** for numerical computations
+- **Scikit-learn** for implementing machine learning models and evaluation metrics
+
+These libraries provide efficient tools for building machine learning pipelines and performing model comparisons.
+
+
 ## Platform and Machine Configurations Used
-Such Google Colab, Kaggle, Syzygy, or your own machine then the machine configuration.
+
+All experiments for this project were conducted on a personal computer using Python. The development environment included Visual Studio Code and a Python virtual environment configured using Conda.
+
+The key software configuration used in the project includes:
+
+- Python 3.x
+- Pandas
+- NumPy
+- Scikit-learn
+
+These tools provided the necessary functionality to preprocess the dataset, train machine learning models, and evaluate predictive performance.
+
 
 ## Data Split
 
-Data splitting is the process of dividing the data into training, validation, and test sets. This step can help you evaluate the performance of the model on new data.
+After preprocessing the dataset, the data was divided into training and testing sets. Data splitting is an essential step in machine learning because it allows the model to be evaluated on unseen data.
+
+In this project, the dataset was split using an **80/20 train-test split**, where:
+
+- **80% of the data** was used to train the machine learning models
+- **20% of the data** was used to evaluate model performance
+
+This approach ensures that the models are evaluated on data that was not used during training, providing a more realistic measure of predictive performance.
+
 
 ## Model Planning
 
-The next step is to select the appropriate machine learning or deep learning models ( 2 - 3 ) that can be used to solve the problem. This involves evaluating different models and selecting the one that is best suited for the problem.
+Three supervised machine learning classification models were selected for this project:
 
-## Model Training: 
+- Logistic Regression
+- Decision Tree
+- Random Forest
 
-This involves using the training data to adjust the model parameters to improve its accuracy.
+These models were chosen because they represent different machine learning approaches. Logistic Regression is a linear classification model, Decision Trees capture non-linear decision boundaries, and Random Forest is an ensemble method that combines multiple decision trees to improve prediction performance.
+
+By comparing these models, the project aims to determine which approach performs best for predicting thyroid disease.
+
+
+## Model Training
+
+Each model was trained using the training dataset after preprocessing was completed. The training process involves allowing the model to learn relationships between input features and the target variable.
+
+The Scikit-learn library was used to implement the models. During training, the models adjusted their internal parameters in order to minimize classification errors and improve predictive accuracy.
+
+Once the training process was complete, the models were applied to the testing dataset to generate predictions.
+
 
 ## Model Evaluation
 
-Once the model is trained, the next step is to evaluate its performance on a validation dataset. 
+To evaluate the performance of each model, several common classification metrics were used. These include:
+
+- **Accuracy**, which measures the proportion of correct predictions
+- **Precision**, which measures how many predicted positive cases were correct
+- **Recall**, which measures how well the model identifies actual positive cases
+- **F1-score**, which provides a balance between precision and recall
+
+These metrics provide a comprehensive evaluation of model performance, particularly in cases where the dataset may contain class imbalance.
+
 
 ## Model Optimization
 
-Based on the results of the model evaluation, the next step is to optimize the model to improve its performance. This involves making changes to the model's architecture, tuning the hyperparameters, and retraining the model.
+Model optimization involves adjusting model parameters and configurations to improve predictive performance. In this project, model parameters were configured using the default implementations provided by the Scikit-learn library.
+
+Although extensive hyperparameter tuning was not performed, the comparison of multiple machine learning models provides insight into which algorithm is best suited for the thyroid disease prediction task.
+
 
 ## Final Model Building
 
-Once the model is optimized, the final step is to fit the model and report final test error for each model
+After training and evaluating the models, the final step was to compare the performance of each algorithm. The results showed that all models achieved high classification accuracy, with the Random Forest model achieving the best overall performance.
 
-Present the information with support Screen Shots/ Figures (Each Figure must be numbered and Description of Figure must be provided)
+The final model comparison demonstrates how different machine learning techniques can be applied to medical datasets to identify patterns and predict disease outcomes.

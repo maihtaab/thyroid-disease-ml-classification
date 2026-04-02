@@ -1,4 +1,6 @@
 # References {.unnumbered}
 
-::: {#refs}
-:::
+UCI Machine Learning Repository. (n.d.). *Thyroid Disease Dataset*.  
+https://archive.ics.uci.edu/ml/datasets/Thyroid+Disease
+
+Pedregosa, F., Varoquaux, G., Gramfort, A., Michel, V., Thirion, B., Grisel, O., ... & Duchesnay, É. (2011). Scikit-learn: Machine learning in Python. *Journal of Machine Learning Research*, 12, 2825–2830.
