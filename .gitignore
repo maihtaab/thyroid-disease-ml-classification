@@ -170,16 +170,16 @@ env/
 # Python pipenv
 Pipfile.lock
 
-# pip  
+# pip
 pip-env-requirements.txt
 
-# Poetry  
+# Poetry
 poetry.lock
 
-# Anaconda  
+# Anaconda
 *.conda-lock
 
-# Ruby  
+# Ruby
 *.gem
 vendor/bundle/
 
@@ -199,8 +199,8 @@ Temporary Items/
 
 # Git keepers (if you intentionally want to keep empty dirs tracked,
 # you can keep a .gitkeep or README.md in that folder—but ignore all other content)
-# If you do keep a blank `.gitkeep` file, then add: 
-# !.gitkeep  
+# If you do keep a blank `.gitkeep` file, then add:
+# !.gitkeep
 # under that folder’s section.
 
 # ──────────────────────────────────────────────────────────────────────────────
@@ -212,6 +212,9 @@ Temporary Items/
 # !_build/README.md
 
 # If you want to ignore all hidden files except `.gitignore` itself:
-# .*/ 
+# .*/
 # !/.gitignore
 
+
+/.quarto/
+**/*.quarto_ipynb
