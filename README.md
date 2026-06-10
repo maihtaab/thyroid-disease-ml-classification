@@ -1,51 +1,73 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/hlUG2xa0)
-[![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-2e0aaae1b6195c2367325f4f02e2d04e9abb55f0b24a779b69b11b9e10269abc.svg)](https://classroom.github.com/online_ide?assignment_repo_id=23136184&assignment_repo_type=AssignmentRepo)
-Project Instructions
-==============================
+# Thyroid Disease ML Classification
 
-This repo contains the instructions for a machine learning project. 
+Machine learning project for detecting hyperthyroid disease using clinical patient data from the UCI Thyroid Disease Dataset.
 
-**Do Not Forget to mention the Python Version being used and complete the requirements.txt fil**
+## Overview
 
-Project Organization
-------------
+This project evaluates the effectiveness of supervised machine learning models for thyroid disease detection. The dataset was preprocessed through missing value handling, categorical feature encoding, and train-test splitting before model training.
 
-    ├── README.md          <- The top-level README for describing highlights for using this ML project.
-    │
-    ├── notebooks          <- Jupyter notebooks. Naming convention should snake case.
-    │
-    ├── reports            
-    │   └── figures        <- Generated graphics and figures to be used in reporting
-    │   └── README.md      <- Youtube Video Link
-    │   └── final_project_report <- final report .pdf format and supporting files
-    │   └── presentation   <-  final power point presentation 
-    |
-    ├── requirements.txt   <- The requirements file for reproducing the analysis environment, e.g.
-    │                         generated with `pip freeze > requirements.txt`
-    │
-    ├── src                <- Source code for use in this project.
-       ├── __init__.py    <- Makes src a Python module
-       ├── data
-       │   ├── processed      <- The final, canonical data sets for modeling.
-       │   └── raw            <- The original, immutable data dump.
-       │
-       ├── preprocessing_data           <- Scripts to download or generate data and pre-process the data
-       │   └── pre-processing.py
-       │
-       ├── feature_engineering       <- Scripts to turn raw data into features for modeling
-       │   └── build_features.py
-       │
-       ├── models         <- Scripts to train models and then use trained models to make
-       │   │                 predictions
-       │   ├── predict_model.py
-       │   └── train_model.py
-       │
-       └── visualization  <- Scripts to create exploratory and results oriented visualizations
-       │   └── visualize.py  
-       │
-       └── main.py  <- main script to run all the models and call appropriate functions
-       |
-       ├── LICENSE  <- LICENSE terms to be included for the use of the source code distribution
+Three classification models were implemented and compared:
 
+* Logistic Regression
+* Decision Tree
+* Random Forest
 
+The objective was to determine which model provides the most reliable performance for identifying hyperthyroid disease cases.
+
+## Dataset
+
+Source: UCI Machine Learning Repository – Thyroid Disease Dataset
+
+The dataset contains patient demographic information, laboratory test results, and diagnostic indicators related to thyroid disorders.
+
+## Technologies Used
+
+* Python
+* Pandas
+* NumPy
+* Scikit-Learn
+* Matplotlib
+* Jupyter Notebook
+
+## Results
+
+| Model               | Accuracy   | Precision | Recall    | F1 Score  |
+| ------------------- | ---------- | --------- | --------- | --------- |
+| Logistic Regression | 98.39%     | 87.5%     | 46.7%     | 60.9%     |
+| Decision Tree       | 98.39%     | 71.4%     | 66.7%     | 69.0%     |
+| Random Forest       | **98.75%** | **83.3%** | **66.7%** | **74.1%** |
+
+The Random Forest classifier achieved the strongest overall performance, producing the highest accuracy and F1 score while maintaining strong precision and recall.
+
+## Visualizations
+
+### Model Performance Comparison
+
+![Model Performance](reports/figures/model_performance_comparison.png)
+
+### Random Forest Confusion Matrix
+
+![Random Forest Confusion Matrix](reports/figures/random_forest_confusion_matrix.png)
+
+## Full Project Report
+
+A detailed report describing the methodology, preprocessing pipeline, model evaluation, and conclusions can be found here:
+
+**reports/Machine-Learning-Approaches-for-Thyroid-Disease-Detection.pdf**
+
+## Repository Structure
+
+```text
+src/                    # Source code
+reports/                # Project report and visualizations
+notebooks/              # Jupyter notebooks
+requirements.txt        # Python dependencies
+```
+
+## Author
+
+Maihtaab Sidhu
+
+Wilfrid Laurier University
+Bachelor of Science in Computer Science
 
